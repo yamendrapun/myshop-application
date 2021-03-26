@@ -1,14 +1,10 @@
 import React, { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
 import { Form, Button, Row, Col } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
 import Message from '../components/Message'
 import Loader from '../components/Loader'
 import { getUserDetails, updateUserProfile } from '../actions/userActions'
-import {
-  USER_UPDATE_PROFILE_REQUEST,
-  USER_UPDATE_PROFILE_RESET,
-} from '../constants/userConstants'
+import { USER_UPDATE_PROFILE_RESET } from '../constants/userConstants'
 
 const ProfileScreen = ({ location, history }) => {
   const [name, setName] = useState('')
@@ -58,7 +54,7 @@ const ProfileScreen = ({ location, history }) => {
         {message && <Message variant='danger'>{message}</Message>}
         {error && <Message variant='danger'>{error}</Message>}
         {success && <Message variant='success'>Profile updated!</Message>}
-        {Loader && <Loader />}
+        {loading && <Loader />}
         <Form onSubmit={submitHandler}>
           <Form.Group controlId='name'>
             <Form.Label>Name</Form.Label>
