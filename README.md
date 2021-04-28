@@ -39,13 +39,13 @@ npm run data:destroy
 Sample User Logins
 
 admin@example.com (Admin)
-123456
+12345
 
 john@example.com (Customer)
-123456
+12345
 
 jane@example.com (Customer)
-123456
+12345
 
 # View Demo
 https://myshop-application.herokuapp.com/
