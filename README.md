@@ -46,6 +46,3 @@ john@example.com (Customer)
 
 jane@example.com (Customer)
 12345
-
-# View Demo
-https://myshop-application.herokuapp.com/
